@@ -39,19 +39,16 @@ function formHandler(city, state){
 }
 
 function createBreweryCards(brewery){
-
- 
     const li = document.createElement("li");
     const h4 = document.createElement("h4")
     const p = document.createElement("p")
     const link = document.createElement("a")
     const star = document.createElement("span")
-    const div = document.createElement("div")
+
 
     star.setAttribute("id", "star");
-     //create id for each element to add background photo to in css
     const id = document.getElementsByClassName("brewery-item").length;
-    div.setAttribute("id", `list-${id + 1}`);
+    li.setAttribute("id", `list-${id + 1}`);
     li.className = "brewery-item";
 
     h4.textContent = brewery.name;
@@ -60,13 +57,32 @@ function createBreweryCards(brewery){
     link.textContent = "Visit website"
     star.textContent = "☆"
  
-    li.append( h4, p, link, star, div)
+    li.append( h4, p, link, star)
     breweryList.append(li)
+
+    const newBreweryFav = {
+        name: brewery.name,
+        street: brewery.street,
+        city: brewery.city,
+        state: brewery.state,
+        postal_code: brewery.postal_code,
+        website_url: brewery.website_url
+    }
 
     star.addEventListener("click", () => {
         star.innerText = "★"
         star.style.color = "yellow"
+        addFavorite(newBreweryFav)
     })
 }
 
+function addFavorite(breweryObject){
+    fetch("http://localhost:3000/breweries",{
+            method: "POST",
+            headers:{
+            "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(breweryObject)
+        })
+}
  
