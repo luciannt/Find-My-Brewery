@@ -1,6 +1,8 @@
 .brewery-item {
     list-style: none;
+    position: relative;
 }
+
 #brewery-list {
     display: flex;
 }
@@ -25,6 +27,28 @@
     padding: 10px;
 }
 
-.star{
-    font-size: 30px;
+#star {
+    cursor: pointer;
+    font-size: 26px;
 }
+
+h2 {
+    padding: 0;
+}
+/* 
+#list-1 {
+    content: "";
+    background-image: url("./images/brew1.jpeg");
+    background-size: 240px 150px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+
+#list-2 {
+    background-image:  url("./images/brew2.jpeg");
+    background-size: 200px 150px;
+} */

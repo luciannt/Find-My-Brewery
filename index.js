@@ -1,4 +1,7 @@
-const searchForm = document.getElementById("brewery-search")
+const searchForm = document.getElementById("brewery-search") 
+const breweryList = document.querySelector("#brewery-list")
+const breweryItems = document.getElementsByClassName("brewery-item")
+
 
 //event listener on form
 searchForm.addEventListener("submit", (event) => {
@@ -8,6 +11,10 @@ searchForm.addEventListener("submit", (event) => {
     formHandler(cityInput, stateInput);
     event.target.city.value = "";
     event.target.state.value = "";
+
+    //reset UL list to be empty if new search
+    breweryList.innerHTML = "";
+    
 })
 
 //when form inputs are put in, GET request to api with city and state
@@ -20,7 +27,6 @@ function formHandler(city, state){
         .then(data => data.json())
         .then(breweries => {
             breweries.forEach(brewery => {
-                console.log(brewery)
                 createBreweryCards(brewery)
             });
         })
@@ -33,22 +39,34 @@ function formHandler(city, state){
 }
 
 function createBreweryCards(brewery){
-    const li = document.createElement("li")
-    li.className = "brewery-item"
+
+ 
+    const li = document.createElement("li");
     const h4 = document.createElement("h4")
     const p = document.createElement("p")
     const link = document.createElement("a")
     const star = document.createElement("span")
+    const div = document.createElement("div")
+
     star.setAttribute("id", "star");
+     //create id for each element to add background photo to in css
+    const id = document.getElementsByClassName("brewery-item").length;
+    div.setAttribute("id", `list-${id + 1}`);
+    li.className = "brewery-item";
+
     h4.textContent = brewery.name;
     p.textContent = `${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}`
     link.href = brewery.website_url
     link.textContent = "Visit website"
     star.textContent = "☆"
-    star.style.fontSize = "26px"
-   
-    const breweryList = document.querySelector("#brewery-list")
-    li.append( h4, p, link, star)
+ 
+    li.append( h4, p, link, star, div)
     breweryList.append(li)
 
+    star.addEventListener("click", () => {
+        star.innerText = "★"
+        star.style.color = "yellow"
+    })
 }
+
+ 
