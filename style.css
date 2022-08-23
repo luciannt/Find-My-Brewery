@@ -1,33 +1,78 @@
+body {
+    margin: 20px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+h1{
+    text-align: center;
+}
+
 .brewery-item {
     list-style: none;
     position: relative;
+    padding-left: 20px;
+    text-align: center;
 }
+
+.brewery-item p {
+    font-size: 14px;;
+}
+
 
 #brewery-list {
     display: flex;
+    overflow-x: auto;
+    margin: 1rem 0;
+    padding: 0;
 }
+
 
 .brewery-item img {
     width: 200px;
     height: 270px;
-    padding: 10px;
 }
 
-.favorite-item {
-    list-style: none;
-}
 
 #favorites-list {
     display: flex;
+    list-style: none;
 }
 
-.favorite-item img {
+#favorites-list img {
     width: 200px;
     height: 270px;
-    padding: 10px;
 }
 
-#star {
+
+.star {
     cursor: pointer;
     font-size: 26px;
+    padding-left: 40px;
+}
+
+form {
+    width: 420px;
+    margin: auto;
+    
+}
+
+form input {
+    margin: 10px;
+    border: 1px solid black;
+
+}
+
+form h4 {
+    padding: 4px;
+    margin: 4px;
+
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
 }
