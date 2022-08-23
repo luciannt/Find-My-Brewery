@@ -72,7 +72,8 @@ function createBreweryCards(brewery){
         city: brewery.city,
         state: brewery.state,
         postal_code: brewery.postal_code,
-        website_url: brewery.website_url
+        website_url: brewery.website_url,
+        image: img.src
     }
 
     star.addEventListener("click", (event) => {
@@ -112,13 +113,14 @@ function createFavCards(){
             
                 h4.textContent = brewery.name;
                 p.textContent = `${brewery.street !== null ? brewery.street : " " } ${brewery.city}, ${brewery.state} ${brewery.postal_code}`;
-                link.href = brewery.website_url
-                link.textContent = "Visit website"
-                star.innerText = "★"
-                star.style.color = "orange"
-                star.className = "star"
+                link.href = brewery.website_url;
+                link.textContent = "Visit website";
+                img.src = brewery.image;
+                star.innerText = "★";
+                star.style.color = "orange";
+                star.className = "star";
             
-                li.append(h4, p, link, star)
+                li.append(h4,img, p, link, star)
                 favList.append(li);
 
                 star.addEventListener('click', () => {
