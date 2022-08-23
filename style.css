@@ -5,11 +5,18 @@ main {
 .brewery-item {
     list-style: none;
     position: relative;
+    padding-left: 20px;
+    text-align: center;
 }
 
 #brewery-list {
     display: flex;
+    overflow-x: auto;
+    margin: 1rem 0;
+    padding: 0;
 }
+
+
 
 .brewery-item img {
     width: 200px;

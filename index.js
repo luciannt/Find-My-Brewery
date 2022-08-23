@@ -1,7 +1,6 @@
 const searchForm = document.getElementById("brewery-search") 
 const breweryList = document.querySelector("#brewery-list")
 const breweryItems = document.getElementsByClassName("brewery-item")
-console.log(breweryItems)
 
 
 //event listener on form
