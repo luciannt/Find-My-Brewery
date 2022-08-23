@@ -1,6 +1,9 @@
-const searchForm = document.getElementById("brewery-search") 
-const breweryList = document.querySelector("#brewery-list")
-const breweryItems = document.getElementsByClassName("brewery-item")
+const searchForm = document.getElementById("brewery-search");
+const breweryList = document.querySelector("#brewery-list");
+const breweryItems = document.getElementsByClassName("brewery-item");
+const favList = document.getElementById("favorites-list")
+
+
 
 
 //event listener on form
@@ -96,16 +99,20 @@ function createFavCards(){
     fetch("http://localhost:3000/breweries")
     .then(data => data.json())
     .then(breweries => {
-            breweries.forEach((brewery) => {
-                const favList = document.querySelector("#favorites-list");
+
+        if(breweries.length > 0){
+            const title = document.getElementById("favorites-title")
+            title.classList.remove("hidden")
+        }
+            breweries.forEach((brewery) => { 
                 const li = document.createElement("li");
                 const h4 = document.createElement("h4");
                 const p = document.createElement("p");
                 const link = document.createElement("a");
                 const star = document.createElement("span");
                 const img = document.createElement("img");
-            
-            
+
+                li.className = "favorite_item"
                 h4.textContent = brewery.name;
                 p.textContent = `${brewery.street !== null ? brewery.street : " " } ${brewery.city}, ${brewery.state} ${brewery.postal_code}`;
                 link.href = brewery.website_url;
@@ -141,4 +148,9 @@ function deleteFavorite(id) {
     })
         .then(res => res.json())
 }
+
+
+
+
+
 

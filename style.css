@@ -71,3 +71,7 @@ form h4 {
 h2 {
     text-align: center;
 }
+
+.hidden {
+    visibility: hidden;
+}
