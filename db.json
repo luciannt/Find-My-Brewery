@@ -17,6 +17,15 @@
       "postal_code": "10009-7055",
       "website_url": "http://www.acbnyc.com",
       "id": 2
+    },
+    {
+      "name": "Alphabet City Brewing Co",
+      "street": "96 Avenue C Frnt 4",
+      "city": "New York",
+      "state": "New York",
+      "postal_code": "10009-7055",
+      "website_url": "http://www.acbnyc.com",
+      "id": 3
     }
   ]
 }

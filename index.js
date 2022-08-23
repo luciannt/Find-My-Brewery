@@ -1,6 +1,7 @@
 const searchForm = document.getElementById("brewery-search") 
 const breweryList = document.querySelector("#brewery-list")
 const breweryItems = document.getElementsByClassName("brewery-item")
+console.log(breweryItems)
 
 
 //event listener on form
@@ -39,17 +40,21 @@ function formHandler(city, state){
 }
 
 function createBreweryCards(brewery){
+ 
     const li = document.createElement("li");
     const h4 = document.createElement("h4")
     const p = document.createElement("p")
     const link = document.createElement("a")
     const star = document.createElement("span")
+    const img = document.createElement("img")
 
 
     star.setAttribute("id", "star");
     const id = document.getElementsByClassName("brewery-item").length;
     li.setAttribute("id", `list-${id + 1}`);
+    img.src = `/images/brew${id}.jpeg`
     li.className = "brewery-item";
+    
 
     h4.textContent = brewery.name;
     p.textContent = `${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}`
@@ -57,9 +62,10 @@ function createBreweryCards(brewery){
     link.textContent = "Visit website"
     star.textContent = "☆"
  
-    li.append( h4, p, link, star)
+    li.append( h4, p, link, star, img)
     breweryList.append(li)
 
+    //object for post request
     const newBreweryFav = {
         name: brewery.name,
         street: brewery.street,
