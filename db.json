@@ -1,31 +1,22 @@
 {
   "breweries": [
     {
-      "name": "Alphabet City Brewing Co",
-      "street": "96 Avenue C Frnt 4",
+      "name": "Birreria @ Eataly",
+      "street": "200 5th Ave Fl 14",
       "city": "New York",
       "state": "New York",
-      "postal_code": "10009-7055",
-      "website_url": "http://www.acbnyc.com",
+      "postal_code": "10010-3302",
+      "website_url": "http://www.eatalyny.com",
       "id": 1
     },
     {
-      "name": "Alphabet City Brewing Co",
-      "street": "96 Avenue C Frnt 4",
+      "name": "B9 Beverages Inc",
+      "street": "404 5th Ave # 7.055",
       "city": "New York",
       "state": "New York",
-      "postal_code": "10009-7055",
-      "website_url": "http://www.acbnyc.com",
+      "postal_code": "10018-2797",
+      "website_url": null,
       "id": 2
-    },
-    {
-      "name": "Alphabet City Brewing Co",
-      "street": "96 Avenue C Frnt 4",
-      "city": "New York",
-      "state": "New York",
-      "postal_code": "10009-7055",
-      "website_url": "http://www.acbnyc.com",
-      "id": 3
     }
   ]
 }

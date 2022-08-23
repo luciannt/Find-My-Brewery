@@ -17,9 +17,6 @@ h1{
     font-size: 14px;;
 }
 
-.brewery-item a {
-
-}
 
 #brewery-list {
     display: flex;
@@ -29,22 +26,19 @@ h1{
 }
 
 
-
 .brewery-item img {
     width: 200px;
     height: 270px;
 }
 
-.favorite-item {
-    list-style: none;
-}
 
 #favorites-list {
     display: flex;
+    list-style: none;
 }
 
 
-#star {
+.star {
     cursor: pointer;
     font-size: 26px;
     padding-left: 40px;

@@ -38,8 +38,10 @@ function formHandler(city, state){
 
 }
 
-function createBreweryCards(brewery){
  
+
+function createBreweryCards(brewery){
+
     const li = document.createElement("li");
     const h4 = document.createElement("h4")
     const p = document.createElement("p")
@@ -47,8 +49,7 @@ function createBreweryCards(brewery){
     const star = document.createElement("span")
     const img = document.createElement("img")
 
-
-    star.setAttribute("id", "star");
+    star.className = "star";
     const id = document.getElementsByClassName("brewery-item").length;
     li.setAttribute("id", `list-${id + 1}`);
     img.src = `/images/brew${id + 1}.jpeg`
@@ -74,20 +75,73 @@ function createBreweryCards(brewery){
         website_url: brewery.website_url
     }
 
-    star.addEventListener("click", () => {
+    star.addEventListener("click", (event) => {
         star.innerText = "★"
         star.style.color = "orange"
-        addFavorite(newBreweryFav)
+        addFavorite(newBreweryFav, event)
     })
 }
 
-function addFavorite(breweryObject){
+function addFavorite(favBrewery, event){
+    event.preventDefault()
     fetch("http://localhost:3000/breweries",{
             method: "POST",
             headers:{
             "Content-Type" : "application/json"
             },
-            body: JSON.stringify(breweryObject)
+            body: JSON.stringify(favBrewery)
         })
+        
+    createFavCards()
+  
 }
+
+function createFavCards(){
+    fetch("http://localhost:3000/breweries")
+    .then(data => data.json())
+    .then(breweries => {
+            breweries.forEach((brewery) => {
+                const favList = document.querySelector("#favorites-list");
+                const li = document.createElement("li");
+                const h4 = document.createElement("h4");
+                const p = document.createElement("p");
+                const link = document.createElement("a");
+                const star = document.createElement("span");
+                const img = document.createElement("img");
+            
+            
+                h4.textContent = brewery.name;
+                p.textContent = `${brewery.street !== null ? brewery.street : " " } ${brewery.city}, ${brewery.state} ${brewery.postal_code}`;
+                link.href = brewery.website_url
+                link.textContent = "Visit website"
+                star.innerText = "★"
+                star.style.color = "orange"
+                star.className = "star"
+            
+                li.append(h4, p, link, star)
+                favList.append(li);
+
+                star.addEventListener('click', () => {
+                    li.remove()
+                    deleteFavorite(brewery.id)
+                })
+            })
+     })
+}
+
+createFavCards();
+
  
+// card.querySelector('#remove').addEventListener('click', () => {
+//     card.remove()
+//     deleteFavorite(star.id)
+// })
+
+function deleteFavorite(id) {
+    fetch(`http://localhost:3000/breweries/${id}`, {
+        method: "DELETE",
+        header: { "Content-Type": "application/json" },
+    })
+        .then(res => res.json())
+}
+
