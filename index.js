@@ -5,7 +5,6 @@ const breweryItems = document.getElementsByClassName("brewery-item")
 
 //event listener on form
 searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
     const cityInput = event.target.city.value;
     const stateInput = event.target.state.value;
     formHandler(cityInput, stateInput);
@@ -19,7 +18,7 @@ searchForm.addEventListener("submit", (event) => {
 
 //when form inputs are put in, GET request to api with city and state
 function formHandler(city, state){
-    console.log(city, state)
+    event.preventDefault();
 
     //checks for city and state values
     if(city && state){
@@ -35,10 +34,8 @@ function formHandler(city, state){
         alert("Please enter both city and state!")
     )
 
-
 }
 
- 
 
 function createBreweryCards(brewery){
 
@@ -92,8 +89,6 @@ function addFavorite(favBrewery, event){
             },
             body: JSON.stringify(favBrewery)
         })
-        
-    createFavCards()
   
 }
 
