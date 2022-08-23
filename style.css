@@ -1,5 +1,9 @@
-main {
+body {
     margin: 20px;
+}
+
+h1{
+    text-align: center;
 }
 
 .brewery-item {
@@ -7,6 +11,14 @@ main {
     position: relative;
     padding-left: 20px;
     text-align: center;
+}
+
+.brewery-item p {
+    font-size: 14px;;
+}
+
+.brewery-item a {
+
 }
 
 #brewery-list {
@@ -35,6 +47,28 @@ main {
 #star {
     cursor: pointer;
     font-size: 26px;
+    padding-left: 40px;
+}
+
+form {
+    width: 420px;
+    margin: auto;
+    
+}
+
+form input {
+    margin: 10px;
+    border: 1px solid black;
+
+}
+
+form h4 {
+    padding: 4px;
+    margin: 4px;
+
 }
 
 
+h2 {
+    text-align: center;
+}
