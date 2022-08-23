@@ -1,0 +1,35 @@
+.brewery-item {
+    list-style: none;
+    position: relative;
+}
+
+#brewery-list {
+    display: flex;
+}
+
+.brewery-item img {
+    width: 200px;
+    height: 270px;
+    padding: 10px;
+}
+
+.favorite-item {
+    list-style: none;
+}
+
+#favorites-list {
+    display: flex;
+}
+
+.favorite-item img {
+    width: 200px;
+    height: 270px;
+    padding: 10px;
+}
+
+#star {
+    cursor: pointer;
+    font-size: 26px;
+}
+
+
