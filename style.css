@@ -59,6 +59,7 @@ nav img{
     font-size: 18px;
     padding: auto;
     height: 30px;
+    width: 200px;
 }
 
 .brewery-item p, .favorite_item p {

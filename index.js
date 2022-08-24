@@ -58,8 +58,6 @@ function deleteFavorite(id) {
 //when form inputs are put in, GET request to api with city and state
 function formHandler(city, state, type, event){
     event.preventDefault();
-    event.target.city.style.borderColor = ""
-    event.target.state.style.borderColor = "" 
 
     //checks for city, state, and types values
     if(city && state && type === "choose"){
@@ -91,10 +89,6 @@ function formHandler(city, state, type, event){
                 results.textContent = "No results for this. Try again!";
             }
         })
-    } 
-    if(!city || !state){
-        event.target.city.style.borderColor = "red";
-        event.target.state.style.borderColor = "red";
     } 
 }
 
