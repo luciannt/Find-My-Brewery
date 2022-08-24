@@ -2,136 +2,256 @@ body {
     margin: 20px;
     font-family: 'Abril Fatface', cursive;
 }
-
+ 
 h1{
     text-align: center;
 }
-
+ 
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+ 
+.nav-links ul li a{
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    font-size: 13px;
+}
+ 
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0f1010;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+ 
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+ 
 .brewery-item {
     list-style: none;
     position: relative;
     padding-left: 20px;
     text-align: center;
 }
-
+ 
 .brewery-item p {
     font-size: 14px;;
 }
-
-
+ 
+ 
 #brewery-list {
     display: flex;
     overflow-x: auto;
     margin: 1rem 0;
     padding: 0;
 }
-
-
+ 
+ 
 .brewery-item img {
     width: 200px;
     height: 270px;
 }
-
-
+ 
+ 
 #favorites-list {
     display: flex;
     list-style: none;
 }
-
+ 
 #favorites-list img {
     width: 200px;
     height: 270px;
 }
-
-
+ 
+ 
 .star {
     cursor: pointer;
     font-size: 26px;
     padding-left: 40px;
 }
-
+ 
 form {
     width: 420px;
     margin: auto;
-    
+   
 }
-
+ 
 form input {
     margin: 10px;
     border: 1px solid black;
-
+ 
 }
-
+ 
 form h4 {
     padding: 4px;
     margin: 4px;
-
+ 
 }
-
-
+ 
+ 
 h2 {
     text-align: center;
 }
-
+ 
 .hidden {
     visibility: hidden;
 }
-/*--FOOTER--*/
-
-footer {  
-    margin: 0;  
-    padding: 0;  
-    font-family: 'Poppins', sans-serif;  
-   }  
-   body {  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    min-height: 100vh;  
-    background: #fcfcfc;  
-   }  
-   #form {  
-    position: relative;  
-   }  
-   #form #email {  
-    width: 300px;  
-    background: #fcfafa;  
-    outline: none;  
-    border: none;  
-    padding: 10px;  
-    border-radius: 6px;  
-    color: #fff;  
-    font-style: 18px;  
-   }  
-   #form .input-box {  
-    position: relative;  
-   }  
-   #text {  
-    display: block;  
-    color: #000;  
-    font-weight: 300;  
-    font-style: italic;  
-    padding: 5px;  
-   }  
-   #form.invalid .input-box::before {  
-    content: '';  
-    position: absolute;  
-    right: 12px;  
-    top: 9px;  
-    width: 24px;  
-    height: 24px;  
-    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/invalid.png);  
-    -webkit-background-size: cover;  
-    background-size: cover;  
-   }  
-   #form.valid .input-box::before {  
-    content: '';  
-    position: absolute;  
-    right: 12px;  
-    top: 9px;  
-    width: 24px;  
-    height: 24px;  
-    background: url(https://fadzrinmadu.github.io/hosted-assets/email-validation-check-using-javascript/valid.png);  
-    -webkit-background-size: cover;  
-    background-size: cover;  
-   }
+ 
+/*----Footer---*/
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  section {
+    padding: 60px 0;
+ 
+  }
+  .footer {
+    background: linear-gradient(105deg, #6e99e6, #093c94);
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+ 
+  /*Subscribe*/
+  .subscribe {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .subscribe__input {
+    background-color: #fff;
+    border: medium none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 60px;
+    letter-spacing: 0.4px;
+    margin: 0;
+    padding: 0 150px 0 20px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
+    .subscribe__input {
+      padding: 0 50px 0 20px;
+    }
+  }
+ 
+  .subscribe__btn {
+    background-color: transparent;
+    border-radius: 0 25px 25px 0;
+    color: #040404;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+  }
+  .subscribe__btn i {
+    transition: all 0.3s ease 0s;
+  }
+  @media only screen and (max-width: 768px) {
+    .subscribe__btn {
+      right: 0px;
+    }
+  }
+ 
+  .subscribe__btn:hover i {
+    color: #020202;
+  }
+  button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+ 
+  /*---Socials---*/
+  .social_profile {
+    margin-top: 40px;
+  }
+  .social_profile ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+  }
+  .social_profile ul li {
+    float: left;
+  }
+  .social_profile ul li a {
+    text-align: center;
+    border: 0px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    margin: 0px 5px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  @media only screen and (max-width: 768px) {
+    .social_profile ul li a {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .social_profile ul li a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  .social_profile ul li a:hover {
+    background: #070707;
+    border: 1px solid #070707;
+    color: #fff;
+    border: 0px;
+  }
+  /*END SOCIAL PROFILE CSS*/
+  .copyright {
+    margin-top: 70px;
+    padding-top: 40px;
+    color: #fff;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+  }
+  .copyright a {
+    color: #050505;
+    transition: all 0.2s ease 0s;
+  }
+  .copyright a:hover {
+    color: #070707;
+  }
