@@ -2,6 +2,7 @@ const searchForm = document.getElementById("brewery-search");
 const breweryList = document.querySelector("#brewery-list");
 const breweryItems = document.getElementsByClassName("brewery-item");
 const favList = document.getElementById("favorites-list")
+const brewContainer = document.getElementById("brewery-container");
 
 
 
@@ -28,6 +29,8 @@ function formHandler(city, state){
         fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&per_page=6`)
         .then(data => data.json())
         .then(breweries => {
+            const results = document.getElementById("results")
+            results.textContent = `Showing results for ${city}, ${state}...`
             breweries.forEach(brewery => {
                 createBreweryCards(brewery)
             });

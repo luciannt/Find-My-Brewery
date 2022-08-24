@@ -1,4 +1,4 @@
-body {
+body, #results {
     margin: 20px;
     font-family: 'Abril Fatface', cursive;
 }
@@ -48,54 +48,42 @@ nav img{
     width: 100%;
 }
 
-.brewery-item {
+.brewery-item, .favorite_item{
     list-style: none;
     position: relative;
     padding-left: 20px;
     text-align: center;
 }
 
-.brewery-item p {
-    font-size: 14px;;
+.brewery-item h4 , .favorite_item h4{
+    font-size: 16px;
+    padding: auto;
+    height: 30px;
 }
 
-.brewery-item p{
+.brewery-item p, .favorite_item p {
     width: 200px;
+    font-size: 12px;
+    height: 25px;
 }
 
-
-#brewery-list {
+#brewery-list, #favorites-list {
     display: flex;
     overflow-x: auto;
     margin: 1rem 0;
     padding: 0;
 }
 
-
-.brewery-item img {
+.brewery-item img, .favorite_item img{
+    flex: 0 1 auto;
     width: 200px;
     height: 270px;
 }
 
-
-#favorites-list {
-    display: flex;
-    list-style: none;
-    text-align: center;
-}
-
-#favorites-list img {
-    width: 200px;
-    height: 270px;
-}
-
-#favorites-list p{
-    font-size: 16px;
-    width: 200px;
-}
-
-.favorite_item {
-    padding-right: 20px;
+.brewery-item a, .favorite_item a{
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
 }
 
 .star {
@@ -128,6 +116,7 @@ form h4 {
 h2 {
     text-align: center;
     margin-top: 100px;
+    font-size: 24px;
 }
 
 .hidden {
