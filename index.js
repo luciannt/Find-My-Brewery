@@ -167,7 +167,7 @@ function deleteFavorite(id) {
 }
 
 //EMAIL
-//
+//the .classList property returns the live collection of CSS classes of the element. We use add() and remove() to add CSS classes to and remove CSS classes from the class list of an element.
 function validation() {  
     let form = document.getElementById('form')  
     let email = document.getElementById('email').value  
