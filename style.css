@@ -56,7 +56,7 @@ nav img{
 }
 
 .brewery-item h4 , .favorite_item h4{
-    font-size: 16px;
+    font-size: 18px;
     padding: auto;
     height: 30px;
 }
@@ -64,7 +64,8 @@ nav img{
 .brewery-item p, .favorite_item p {
     width: 200px;
     font-size: 12px;
-    height: 25px;
+    height: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #brewery-list, #favorites-list {
@@ -84,6 +85,7 @@ nav img{
     cursor: pointer;
     font-size: 14px;
     position: relative;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .star {
@@ -108,8 +110,7 @@ form input {
 form h4 {
     padding: 10px;
     margin: 4px;
-    font-size: 24px;
-  
+    font-size: 24px;  
 }
 
 
@@ -125,5 +126,11 @@ h2 {
 
 #results {
     margin: 20px;
-    font-size: 12px;
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+span {
+    font-weight: bolder;
 }
