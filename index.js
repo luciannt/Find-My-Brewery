@@ -11,9 +11,11 @@ const brewContainer = document.getElementById("brewery-container");
 searchForm.addEventListener("submit", (event) => {
     const cityInput = event.target.city.value;
     const stateInput = event.target.state.value;
-    formHandler(cityInput, stateInput);
-    event.target.city.value = "";
-    event.target.state.value = "";
+    const optionInput = event.target.types.value;
+    console.log(optionInput)
+    formHandler(cityInput, stateInput, optionInput, event);
+    // event.target.city.value = "";
+    // event.target.state.value = "";
 
     //reset UL list to be empty if new search
     breweryList.innerHTML = "";
@@ -21,27 +23,44 @@ searchForm.addEventListener("submit", (event) => {
 })
 
 //when form inputs are put in, GET request to api with city and state
-function formHandler(city, state){
+function formHandler(city, state, type, event){
     event.preventDefault();
 
     //checks for city and state values
-    if(city && state){
+    if(city && state && type === "choose"){
         fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&per_page=6`)
         .then(data => data.json())
         .then(breweries => {
+            console.log("hi")
+            console.log(breweries.length)
             const results = document.getElementById("results")
             results.textContent = `Showing results for ${city}, ${state}...`
             breweries.forEach(brewery => {
                 createBreweryCards(brewery)
             });
         })
-   
-    } else (
-        //change input styles to highlight?
-        alert("Please enter both city and state!")
-    )
+    }
+    else if(city && state && type != "choose"){
+        fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&by_type=${type}&per_page=6`)
+        .then(data => data.json())
+        .then(breweries => {
+            const results = document.getElementById("results")
+
+            if(breweries.length > 0){
+                results.textContent = `Showing results for ${city}, ${state}...`
+                breweries.forEach(brewery => {
+                    createBreweryCards(brewery)
+                }) 
+            }
+
+            if(breweries.length === 0) {
+                results.textContent = "No results for this. Try again!"
+            }
+        })
+    } 
 
 }
+
 
 
 function createBreweryCards(brewery){
@@ -78,7 +97,7 @@ function createBreweryCards(brewery){
         postal_code: brewery.postal_code,
         website_url: brewery.website_url,
         image: img.src
-    }
+    };
 
     star.addEventListener("click", (event) => {
         star.innerText = "★"
@@ -158,3 +177,6 @@ function deleteFavorite(id) {
 
 
 
+fetch(`https://api.openbrewerydb.org/breweries?by_city=erie&by_state=pennsylvania&per_page=6`)
+        .then(data => data.json())
+        .then(data => console.log(data))
