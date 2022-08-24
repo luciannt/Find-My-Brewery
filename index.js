@@ -37,6 +37,7 @@ function formHandler(city, state){
         })
    
     } else (
+        //change input styles to highlight?
         alert("Please enter both city and state!")
     )
 
@@ -55,7 +56,7 @@ function createBreweryCards(brewery){
     star.className = "star";
     const id = document.getElementsByClassName("brewery-item").length;
     li.setAttribute("id", `list-${id + 1}`);
-    img.src = `/images/brew${id + 1}.jpeg`
+    img.src = `./images/brew${id + 1}.jpeg`
     li.className = "brewery-item";
     
 
