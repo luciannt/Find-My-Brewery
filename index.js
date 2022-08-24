@@ -167,7 +167,7 @@ function deleteFavorite(id) {
 }
 
 //EMAIL
-
+//
 function validation() {  
     let form = document.getElementById('form')  
     let email = document.getElementById('email').value  
