@@ -9,16 +9,6 @@
       "website_url": null,
       "image": "http://127.0.0.1:5500/images/brew2.jpeg",
       "id": 1
-    },
-    {
-      "name": "Boss Dog Brewing",
-      "street": "2179 Lee Rd",
-      "city": "Cleveland",
-      "state": "Ohio",
-      "postal_code": "44118-2907",
-      "website_url": "http://www.bossdogbrewing.com",
-      "image": "http://127.0.0.1:5500/images/brew3.jpeg",
-      "id": 2
     }
   ]
 }

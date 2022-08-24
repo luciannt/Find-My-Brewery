@@ -26,7 +26,7 @@ function fetchFavorites(){
             const title = document.getElementById("favorites-title");
             title.classList.remove("hidden");
         }
-            breweries.forEach((brewery) => { 
+            breweries.map((brewery) => { 
                createFavCards(brewery);
             })
      })
