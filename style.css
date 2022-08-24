@@ -1,13 +1,10 @@
 body {
   margin: 20px;
-  font-family: "Abril Fatface", cursive;
-  background-color: lightgray;
+  font-family: 'Abril Fatface', cursive;
 }
 
-h1 {
+h1{
   text-align: center;
-  font-size: 46px;
-  margin-bottom: 0px;
 }
 
 nav {
@@ -16,27 +13,27 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-nav img {
-  width: 200px;
+nav img{
+  width: 150px;
 }
-.nav-links {
-  flex: 1;
+.nav-links{
+  flex:1;
   text-align: right;
 }
-.nav-links ul li {
+.nav-links ul li{
   display: inline-block;
   padding: 8px 12px;
   position: relative;
 }
 
-.nav-links ul li a {
+.nav-links ul li a{
   color: rgb(3, 3, 3);
   text-decoration: none;
   font-size: 13px;
 }
 
-.nav-links ul li::after {
-  content: "";
+.nav-links ul li::after{
+  content: '';
   width: 0%;
   height: 2px;
   background: #0f1010;
@@ -45,55 +42,46 @@ nav img {
   transition: 0.5s;
 }
 
-.nav-links ul li:hover::after {
+.nav-links ul li:hover::after{
   width: 100%;
 }
 
-.brewery-item,
-.favorite_item {
+.brewery-item {
   list-style: none;
   position: relative;
   padding-left: 20px;
   text-align: center;
 }
 
-.brewery-item h4 , .favorite_item h4{
-    font-size: 18px;
-    padding: auto;
-    height: 30px;
-    width: 200px;
+.brewery-item p {
+  font-size: 14px;;
 }
 
-.brewery-item p,
-.favorite_item p {
-  width: 200px;
-  font-size: 12px;
-  height: 20px;
-  font-family: "Times New Roman", Times, serif;
-}
 
-#brewery-list,
-#favorites-list {
+#brewery-list {
   display: flex;
   overflow-x: auto;
   margin: 1rem 0;
   padding: 0;
 }
 
-.brewery-item img,
-.favorite_item img {
-  flex: 0 1 auto;
+
+.brewery-item img {
   width: 200px;
   height: 270px;
 }
 
-.brewery-item a,
-.favorite_item a {
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  font-family: "Times New Roman", Times, serif;
+
+#favorites-list {
+  display: flex;
+  list-style: none;
 }
+
+#favorites-list img {
+  width: 200px;
+  height: 270px;
+}
+
 
 .star {
   cursor: pointer;
@@ -102,41 +90,168 @@ nav img {
 }
 
 form {
-  width: 450px;
+  width: 420px;
   margin: auto;
-  margin-bottom: 70px;
-  border: 1px solid black;
+ 
 }
 
 form input {
   margin: 10px;
   border: 1px solid black;
-  margin-left: 20px;
+
 }
 
 form h4 {
-  padding: 10px;
+  padding: 4px;
   margin: 4px;
-  font-size: 24px;
+
 }
+
 
 h2 {
   text-align: center;
-  margin-top: 100px;
-  font-size: 24px;
 }
 
 .hidden {
   visibility: hidden;
 }
 
-#results {
-  margin: 20px;
-  font-size: 13px;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
+/*----Footer---*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  padding: 60px 0;
+
+}
+.footer {
+  background: linear-gradient(105deg, #6e99e6, #093c94);
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
-span {
-  font-weight: bolder;
+/*Subscribe*/
+.subscribe {
+  display: block;
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+.subscribe__input {
+  background-color: #fff;
+  border: medium none;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  height: 60px;
+  letter-spacing: 0.4px;
+  margin: 0;
+  padding: 0 150px 0 20px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .subscribe__input {
+    padding: 0 50px 0 20px;
+  }
+}
+
+.subscribe__btn {
+  background-color: transparent;
+  border-radius: 0 25px 25px 0;
+  color: #040404;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+}
+.subscribe__btn i {
+  transition: all 0.3s ease 0s;
+}
+@media only screen and (max-width: 768px) {
+  .subscribe__btn {
+    right: 0px;
+  }
+}
+
+.subscribe__btn:hover i {
+  color: #020202;
+}
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/*---Socials---*/
+.social_profile {
+  margin-top: 40px;
+}
+.social_profile ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.social_profile ul li {
+  float: left;
+}
+.social_profile ul li a {
+  text-align: center;
+  border: 0px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  margin: 0px 5px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media only screen and (max-width: 768px) {
+  .social_profile ul li a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .social_profile ul li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.social_profile ul li a:hover {
+  background: #070707;
+  border: 1px solid #070707;
+  color: #fff;
+  border: 0px;
+}
+/*END SOCIAL PROFILE CSS*/
+.copyright {
+  margin-top: 70px;
+  padding-top: 40px;
+  color: #fff;
+  font-size: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+.copyright a {
+  color: #050505;
+  transition: all 0.2s ease 0s;
+}
+.copyright a:hover {
+  color: #070707;
 }
