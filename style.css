@@ -57,11 +57,11 @@ nav img {
   text-align: center;
 }
 
-.brewery-item h4,
-.favorite_item h4 {
-  font-size: 18px;
-  padding: auto;
-  height: 30px;
+.brewery-item h4 , .favorite_item h4{
+    font-size: 18px;
+    padding: auto;
+    height: 30px;
+    width: 200px;
 }
 
 .brewery-item p,
