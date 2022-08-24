@@ -1,4 +1,4 @@
-body, #results {
+body {
     margin: 20px;
     font-family: 'Abril Fatface', cursive;
 }
@@ -121,4 +121,9 @@ h2 {
 
 .hidden {
     visibility: hidden;
+}
+
+#results {
+    margin: 20px;
+    font-size: 12px;
 }

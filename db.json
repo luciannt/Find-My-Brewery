@@ -1,3 +1,14 @@
 {
-  "breweries": []
+  "breweries": [
+    {
+      "name": "B9 Beverages Inc",
+      "street": "404 5th Ave # 7.055",
+      "city": "New York",
+      "state": "New York",
+      "postal_code": "10018-2797",
+      "website_url": null,
+      "image": "http://127.0.0.1:5500/images/brew2.jpeg",
+      "id": 1
+    }
+  ]
 }
