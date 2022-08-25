@@ -1,5 +1,6 @@
 body {
   margin: 15px;
+  margin-bottom: 0px;
   font-family: 'Alegreya', serif;
 }
 
@@ -90,22 +91,21 @@ nav img{
 }
 
 form {
-  width: 420px;
+  width: 440px;
   margin: auto;
- 
+  border: 1px solid black;
 }
 
-form input {
+form input, form select {
   margin: 10px;
   border: 1px solid black;
-
 }
 
 form h4 {
   padding: 4px;
   margin: 4px;
-
 }
+
 
 h2 {
   text-align: center;
@@ -117,9 +117,9 @@ h2 {
 
 /*FOOTER*/
 .footer{
-  margin-top: 150px;
+  margin-top: auto;
   width: 100%;
-  padding: 100px 15%;
+  padding: 50px; 
   background: #333;
   color:#fff;
   display: flex;
@@ -129,9 +129,9 @@ h2 {
   text-align: center;
 }
 
-.col-2{
+.col-2 {
   flex-grow: 2;
-}
+} 
 
 .footer div h3 {
   font-weight: 300;
@@ -142,24 +142,29 @@ h2 {
 .col-1 a{
   display: block;
   text-decoration: none;
-  color: #421212;
-  margin-bottom: 10px;
+  color: #fcf9f9;
+  margin: 10px;
+  padding-top: 10px;
 }
 
 /*Subscribe*/
-form input{
-  width: 400px;
-  height: 45px;
+#subscribe {
+  margin: auto;
+  border: none;
+  width: 300px;
+}
+#subscribe input{
   border-radius: 4px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
-  outline: none;
-  border: none;
+  height: 20px;
+  max-width: 200px;
 }
-form button{
+
+#subscribe button{
   background: transparent;
-  border: 2px, solid, rgb(0, 0, 0);
+  border: 2px, solid, rgb(12, 11, 11);
   color: #fff;
   border-radius: 30px;
   padding: 10px 30px;
