@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Brew Hub<h1>
 
 Team Members: Kaeli Gilmore, Jordan Jennings, Lucy Tittle
