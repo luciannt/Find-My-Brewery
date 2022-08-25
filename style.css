@@ -158,12 +158,12 @@ h2 {
 }
 
 /*Subscribe*/
-#subscribe {
+#subscribe-form{
   margin: auto;
   border: none;
   width: 300px;
 }
-#subscribe input{
+#subscribe-form #email{
   border-radius: 4px;
   text-align: center;
   margin-top: 20px;
@@ -172,11 +172,11 @@ h2 {
   max-width: 200px;
 }
 
-#subscribe button{
+#subscribe-form #subscribe{
   background: transparent;
   border: 2px, solid, rgb(12, 11, 11);
   color: #fff;
-  border-radius: 30px;
+  border-radius: 40px;
   padding: 10px 30px;
   font-size: 15px;
   cursor: pointer;

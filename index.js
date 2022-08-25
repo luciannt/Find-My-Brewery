@@ -162,20 +162,20 @@ function createFavCards(brewery){
 
 fetchFavorites(); 
 
-const subForm = document.getElementById('subscribe');
+const subForm = document.getElementById('subscribe-form');
 console.log(subForm)
 
-subForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    validation();
- })
+// subForm.addEventListener("submit", (event) => {
+//     event.preventDefault();
+//     validation();
+//  })
 
 function validation() {  
     let email = document.getElementById('email').value  
     let text = document.getElementById('text')  
     let pattern = /^[^ ]+@[^ ]+.[a-z]{2,3}$/  
     if (email.match(pattern)) {  
-     subForm.classList.add('valid')  
+     subForm.classList.add('valid') 
      subForm.classList.remove('invalid')  
      text.innerHTML = "Your Email Address in valid"  
      text.style.color = '#00ff00'  
@@ -190,7 +190,6 @@ function validation() {
      subForm.classList.remove('invalid')  
      text.innerHTML = ""  
      text.style.color = '#00ff00'  
-
 
     }  
    }  
