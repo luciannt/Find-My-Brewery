@@ -9,6 +9,16 @@
       "website_url": "http://www.acbnyc.com",
       "image": "http://127.0.0.1:5500/images/brew1.jpeg",
       "id": 1
+    },
+    {
+      "name": "Bonaventure Brewing Co",
+      "street": "404 S Figueroa St Ste 418A",
+      "city": "Los Angeles",
+      "state": "California",
+      "postal_code": "90071-1797",
+      "website_url": "http://www.bonaventurebrewing.com",
+      "image": "http://127.0.0.1:5500/images/brew3.jpeg",
+      "id": 2
     }
   ]
 }

@@ -22,14 +22,10 @@ function fetchFavorites(){
     fetch("http://localhost:3000/breweries")
     .then(data => data.json())
     .then(breweries => {
-        if(breweries.length > 0){
-            const title = document.getElementById("favorites-title");
-            title.classList.remove("hidden");
-        }
-            breweries.map((brewery) => { 
-               createFavCards(brewery);
-            })
-     })
+         breweries.map((brewery) => { 
+            createFavCards(brewery);
+        })
+    }) 
 }
 
 //post method on a favorited brewery
@@ -61,7 +57,7 @@ function formHandler(city, state, type, event){
 
     //checks for city, state, and types values
     if(city && state && type === "choose"){
-        fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&per_page=6`)
+        fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&per_page=10`)
         .then(data => data.json())
         .then(breweries => {
             console.log("hi")
@@ -74,7 +70,7 @@ function formHandler(city, state, type, event){
         })
     }
     if(city && state && type != "choose"){
-        fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&by_type=${type}&per_page=6`)
+        fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}&by_state=${state}&by_type=${type}&per_page=10`)
         .then(data => data.json())
         .then(breweries => {
             const results = document.getElementById("results")

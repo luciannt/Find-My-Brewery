@@ -9,19 +9,23 @@ h1{
   font-size: 50px;
 }
 
+/* nav bar */
 nav {
   display: flex;
-  padding: 2% 6%;
+  padding: 1% 6%;
   justify-content: space-between;
   align-items: center;
 }
+
 nav img{
   width: 200px;
 }
+
 .nav-links{
   flex:1;
   text-align: right;
 }
+
 .nav-links ul li{
   display: inline-block;
   padding: 8px 12px;
@@ -48,6 +52,11 @@ nav img{
   width: 100%;
 }
 
+#results {
+  margin-left: 20px;
+}
+
+/* brewery container and favorites container */
 #brewery-container, #favorites-container {
   height: 520px
 }
@@ -57,6 +66,11 @@ nav img{
   position: relative;
   padding-left: 20px;
   text-align: center;
+}
+
+.brewery-item h4 {
+  height: 30px;
+  font-size: 16px;
 }
 
 .brewery-item p, .favorite_item p {
@@ -88,10 +102,8 @@ nav img{
 
 #brewery-search{
   width: 440px;
-  margin: auto;
-  margin-bottom: 50px;
+  margin: 50px auto 70px;
   border: 1px solid black;
-
 }
 
 #brewery-search input, #brewery-search form select {
@@ -109,9 +121,9 @@ h2 {
   text-align: center;
 }
 
-.hidden {
+/* .hidden {
   visibility: hidden;
-}
+} */
 
 /*FOOTER*/
 .footer{
