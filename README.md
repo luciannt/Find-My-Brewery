@@ -19,7 +19,10 @@ The user is able to click the star ☆ to save that brewery to their favorites u
 
 ## Try Brew Hub
 
-To test Brew Hub for yourself, clone this repository to your local computer. In the terminal run ** **"json-server --watch db.json"**.
+To test Brew Hub for yourself, clone this repository to your local computer. 
+$ npm install -g json-server
+$ cd brew-pub
+$ json-server --watch db.json
 
 To check out the API documentation: https://www.openbrewerydb.org/documentation
 
