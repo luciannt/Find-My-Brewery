@@ -47,38 +47,32 @@ nav img{
   width: 100%;
 }
 
-.brewery-item {
+#brewery-container, #favorites-container {
+  height: 520px
+}
+
+.brewery-item, .favorite_item{
   list-style: none;
   position: relative;
   padding-left: 20px;
   text-align: center;
 }
 
-.brewery-item p {
-  font-size: 14px;;
+.brewery-item p, .favorite_item p {
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
 }
 
 
-#brewery-list {
+#brewery-list, #favorites-list {
   display: flex;
   overflow-x: auto;
   margin: 1rem 0;
   padding: 0;
 }
 
-
-.brewery-item img {
-  width: 200px;
-  height: 270px;
-}
-
-
-#favorites-list {
-  display: flex;
-  list-style: none;
-}
-
-#favorites-list img {
+.brewery-item img, #favorites-list img {
   width: 200px;
   height: 270px;
 }
@@ -90,18 +84,21 @@ nav img{
   padding-left: 40px;
 }
 
-form {
+
+#brewery-search{
   width: 440px;
   margin: auto;
+  margin-bottom: 50px;
   border: 1px solid black;
+
 }
 
-form input, form select {
+#brewery-search input, #brewery-search form select {
   margin: 10px;
   border: 1px solid black;
 }
 
-form h4 {
+#brewery-search h4 {
   padding: 4px;
   margin: 4px;
 }
@@ -117,7 +114,7 @@ h2 {
 
 /*FOOTER*/
 .footer{
-  margin-top: auto;
+  margin-top: 100px;
   width: 100%;
   padding: 50px; 
   background: #333;
@@ -171,6 +168,7 @@ h2 {
   font-size: 15px;
   cursor: pointer;
 }
+
 
 /*SOCIALS*/
 .social-icons{
