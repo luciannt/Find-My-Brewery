@@ -1,5 +1,5 @@
 body {
-  margin: 20px;
+  margin: 15px;
   font-family: 'Alegreya', serif;
 }
 
@@ -115,125 +115,70 @@ h2 {
   visibility: hidden;
 }
 
-/*----Footer---*/
-img {
-  max-width: 100%;
-  height: auto;
+/*FOOTER*/
+.footer{
+  margin-top: 150px;
+  width: 100%;
+  padding: 100px 15%;
+  background: #333;
+  color:#fff;
+  display: flex;
 }
-section {
-  padding: 80px 0;
 
+.footer div {
+  text-align: center;
+}
+
+.col-2{
+  flex-grow: 2;
+}
+
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.col-1 a{
+  display: block;
+  text-decoration: none;
+  color: #421212;
+  margin-bottom: 10px;
 }
 
 /*Subscribe*/
-.subscribe {
-  display: block;
-  position: relative;
-  margin-top: 15px;
-  width: 100%;
-}
-.subscribe__input {
-  background-color: #fff;
-  border: medium none;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  display: block;
-  font-size: 15px;
-  font-weight: 500;
-  height: 30px;
-  letter-spacing: 0.4px;
-  margin: 0;
-  padding: 0 140px 0 20px;
+form input{
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
   text-align: center;
-  text-transform: capitalize;
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .subscribe__input {
-    padding: 0 45px 0 15px;
-  }
-}
-
-.subscribe__btn {
-  background-color: transparent;
-  border-radius: 0 20px 20px 0;
-  color: #040404;
-  cursor: pointer;
-  display: block;
-  font-size: 16px;
-  height: 55px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-}
-.subscribe__btn i {
-  transition: all 0.3s ease 0s;
-}
-@media only screen and (max-width: 768px) {
-  .subscribe__btn {
-    right: 0px;
-  }
-}
-
-.subscribe__btn:hover i {
-  color: #020202;
-}
-button {
-  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
   border: none;
-  background-color: transparent;
-  -webkit-border-radius: 0;
-  border-radius: 0;
 }
-
-/*---Socials---*/
-.social_profile {
-  margin-top: 40px;
-}
-.social_profile ul {
-  list-style: outside none none;
-  margin: 0;
-  padding: 0;
-}
-.social_profile ul li {
-  float: left;
-}
-.social_profile ul li a {
-  text-align: center;
-  border: 0px;
-  text-transform: uppercase;
-  transition: all 0.3s ease 0s;
-  margin: 0px 5px;
-  font-size: 18px;
+form button{
+  background: transparent;
+  border: 2px, solid, rgb(0, 0, 0);
   color: #fff;
   border-radius: 30px;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  display: block;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
 }
-@media only screen and (max-width: 768px) {
-  .social_profile ul li a {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
+
+/*SOCIALS*/
+.social-icons{
+  margin-top: 30px;
 }
-@media only screen and (max-width: 480px) {
-  .social_profile ul li a {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
+.social-icons i{
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
 }
-.social_profile ul li a:hover {
-  background: #070707;
-  border: 1px solid #070707;
-  color: #fff;
-  border: 0px;
-}
-/*END SOCIAL PROFILE CSS*/
+
+
+/*COPYRIGHT*/
 .copyright {
   margin-top: 70px;
   padding-top: 40px;
