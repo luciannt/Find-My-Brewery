@@ -10,9 +10,9 @@ The main functionality is built using a fetch request. The user has the ability 
 ![alt.text](./images/search.png)
 
 
+</br>
 
-
-The user is able to click the star ☆ to save that brewery to their favorites using a POST request. We are replicating a backend server by using json-server. The favorites are saved in the db.json file. Favorite breweries can be deleted as well by clicking the clicked star again.
+The user is able to click the star ☆ to save that brewery to their favorites using a POST request. We are replicating a backend server by using json-server. The favorites are saved in the db.json file. Favorite breweries can be deleted as well by clicking on the star again using a DELETE request and removing it from db.json.
 
 
 ![alt.text](./images/favorites.png)
