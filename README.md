@@ -9,7 +9,7 @@ Brew Hub is a one page app that uses a public API to search for breweries in a d
 The main functionality is built using a fetch request. The user has the ability to search by city and state, as well as type of brewery. The API returns up to 10 breweries with their name, address, and website. 
 
 ![alt.text](./images/search.png)
-<<<<<<< HEAD
+
 
 The user is able to click the star ☆ to save that brewery to their favorites using a POST request. We are replicating a backend server by using json-server. The favorites are saved in the db.json file. Favorite breweries can be deleted as well by clicking the clicked star again.
 
