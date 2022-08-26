@@ -138,6 +138,11 @@ nav img {
 	transition: 0.2s ease;
 }
 
+#favorites-title {
+  margin-top: 50px;
+  font-size: 32px;
+}
+
 .item-container {
 	display: flex;
 	flex-direction: column;
